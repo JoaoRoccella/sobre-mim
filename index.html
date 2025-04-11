@@ -4,25 +4,28 @@
         <!-- Meta informações sobre a página -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="basic.css">
         <title>Sobre mim</title>
     </head>
-    <!-- HTML NÃO TEM PESCOÇO! -->
     <body>
         <header>
-            <ul>
-                <li><a href="#sobreMim">Sobre mim</a></li>
-                <li><a href="#formacaoAcademica">Formação acadêmica</a></li>
-                <li><a href="#hardSkills">Hard skills</a></li>
-                <li><a href="#softSkills">Soft skills</a></li>
-                <li><a href="#meusProjetos">Meus projetos</a></li>
-                <li><a href="#meusArtigos">Meus artigos</a></li>
-                <li><a href="#rodape">Rodapé</a></li>
-            </ul>
+            <nav>
+                <ul>
+                    <li><a href="#sobreMim">Sobre mim</a></li>
+                    <li><a href="#formacaoAcademica">Formação acadêmica</a></li>
+                    <li><a href="#hardSkills">Hard skills</a></li>
+                    <li><a href="#softSkills">Soft skills</a></li>
+                    <li><a href="#meusProjetos">Meus projetos</a></li>
+                    <li><a href="#meusArtigos">Meus artigos</a></li>
+                    <li><a href="#rodape">Rodapé</a></li>
+                </ul>
+            </nav>
         </header>
 
         <section id="sobreMim">
             <h1>Sobre mim</h1>
-            <p>Sou instrutor de formação profissional no SENAI São Paulo.</p>
+            <p>Sou instrutor de formação profissional no SENAI São Paulo, especializado na área de tecnologia e desenvolvimento de sistemas. Tenho experiência com ensino para adolescentes entre 14 e 18 anos, aplicando a Metodologia SENAI de Educação Profissional (MSEP) e promovendo a formação técnica aliada ao desenvolvimento de competências socioemocionais.</p>
             <img src="joao.jpg" alt="Foto de um homem branco de barba preta com pintinhas no rosto, sorrindo." width="200" title="Foto de um homem branco de barba preta com pintinhas no rosto, sorrindo.">
             
             <ul>
@@ -37,32 +40,66 @@
 
         <section id="formacaoAcademica">
             <h2>Formação acadêmica</h2>
+            <ul>
+                <li>Tecnólogo em Informática para Negócios pela FATEC "Adib Moisés Dib" (2016)</li>
+                <li>Técnico em Eletrônica pela ETEC Lauro Gomes (2003)</li>
+                <li>Ensino Médio completo pela ETEC Lauro Gomes (2003)</li>
+            </ul>
         </section>
 
         <section id="hardSkills">
             <h2>Hard skills</h2>
+            <ul>
+                <li>Programação em Python, JavaScript, HTML/CSS</li>
+                <li>Desenvolvimento Web com Flask</li>
+                <li>Banco de Dados MySQL</li>
+                <li>Desenvolvimento Full Stack</li>
+                <li>Desenvolvimento para Dispositivos Móveis (Android) e IoT</li>
+                <li>Versionamento com Git/GitHub</li>
+                <li>Utilização de Google Classroom e Microsoft Teams para ensino remoto</li>
+            </ul>
         </section>
 
         <section id="softSkills">
             <h2>Soft skills</h2>
+            <ul>
+                <li>Autogestão</li>
+                <li>Pensamento analítico</li>
+                <li>Inteligência emocional</li>
+                <li>Autonomia</li>
+                <li>Resiliência emocional</li>
+                <li>Trabalho em equipe</li>
+                <li>Criatividade e inovação</li>
+            </ul>
         </section>
 
         <section id="meusProjetos">
             <h2>Meus projetos</h2>
+            <ul>
+                <li>Sistema de cadastro de heróis inspirado em Vingadores: Guerra Civil (projeto didático sobre POO em Python)</li>
+                <li>Protótipo de Prontuário Eletrônico do Paciente Laboratorial (TCC da FATEC)</li>
+                <li>Projeto IoT com Raspberry Pi 3 e Arduino Uno</li>
+                <li>Controle de frequência consolidado por turma e UC (SENAI)</li>
+                <li>Iniciativa de jogos de tabuleiro para desenvolvimento de competências socioemocionais</li>
+            </ul>
         </section>
 
         <section id="meusArtigos">
             <h2>Meus artigos</h2>
+            <ul>
+                <li>Ensino de orientação a objetos com Python e cultura pop: uma proposta com os Vingadores</li>
+                <li>Jogos de tabuleiro como estratégia para o desenvolvimento de competências socioemocionais no SENAI</li>
+                <li>Uso de tecnologias educacionais para o ensino de Lógica de Programação no ensino técnico</li>
+            </ul>
         </section>
 
         <section id="contato">
             <h2>Entre em contato comigo</h2>
             <form>
-                <input type="text" name="nome">
-                <input type="email" name="email">
-                <input type="color">
-                <textarea name="mensagem" rows="5" cols="50"></textarea>
-                <input type="submit" name="botaoEnviar">
+                <input type="text" name="nome" placeholder="Seu nome">
+                <input type="email" name="email" placeholder="Seu email">
+                <textarea name="mensagem" rows="5" cols="50" placeholder="Sua mensagem"></textarea>
+                <input type="submit" name="botaoEnviar" value="Enviar">
             </form>
         </section>
 
