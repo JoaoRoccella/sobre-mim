@@ -46,12 +46,8 @@ header a:hover {
 
 section {
     min-height: 100vh;
-    /* vh -> viewport height (altura da viewport) */
-    /* margin: 2rem; */
     scroll-margin-top: 2rem; 
     padding: 4rem;
-    /* border: 1px solid #000000; */
-    /* overflow: hidden; */
     display: grid;
     align-items: center;
 }
@@ -71,10 +67,15 @@ p {
     margin-bottom: 1rem;
 }
 
+#sobreMim {
+    display: block;
+    padding: 4rem 20rem;
+}
+
 #sobreMim img {
     float: left;
     margin: 0 2rem 1rem 0;
-    max-width: 100%;
+    width: 30vw;
     border-radius: 50%;
     border: 5px solid #0077b6;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
@@ -86,7 +87,34 @@ p {
     line-height: 1.6;
 }
 
+.redes {
+    clear: both;
+    margin: 3rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.1rem;
+}
+
+.redes i {
+    font-size: 2rem;
+    vertical-align: middle;
+}
+
 /* Cards */
+
+.cards-em-coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cards-em-linha {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
 
 .card {
     border-radius: 8px;
@@ -115,17 +143,6 @@ p {
 .card .card-instituicao {
     font-size: 1.1rem;
     color: #555;
-}
-
-/* Card com imagem (projetos) */
-.cards {
-    background-color: #e0f7fa;
-    border-radius: 8px;
-    padding: 1rem;
-    width: 30vw;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    list-style: none;
-    font-family: inherit;
 }
 
 .card-imagem img {
@@ -231,6 +248,11 @@ p {
    margin-bottom: .5rem;
 }
 
+/* Projetos */
+#meusProjetos .card {
+    width: 30%;
+}
+
 /* Ícones */
 .card-icone i {
     color: #626786;
@@ -240,24 +262,7 @@ p {
     color: green;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .cards-linha {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header ul {
-        flex-direction: column;
-    }
-
-    .card,
-    .cards {
-        width: 90%;
-    }
-}
-
-
+/* Formulário */
 form {
     display: flex;
     flex-direction: column;
@@ -283,40 +288,27 @@ input[type="submit"] {
     font-weight: 700;
 }
 
-/* ESTILOS DOS CARDS */
+/* Responsividade */
+@media (max-width: 768px) {
 
-.card {
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    list-style: none;
-}
+    /* #sobreMim {
+        padding: 4rem;
+    } */
 
-.titulo-card {
-    font-weight: bold;
-    color: #0077b6;
-    font-size: 1.3rem;
-}
+    .cards-linha {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.instituicao-card {
-    font-size: 1.1rem;
-    color: #555;
-}
+    header ul {
+        flex-direction: column;
+    }
 
-.icone-card {
-    text-align: center;
-    font-size: 2rem;
-}
+    .card,
+    #meusProjetos .card,
+    #meusArtigos .card,
+    #sobreMim img {
+        width: 100%;
+    }
 
-.cards-em-coluna {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.cards-em-linha {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    flex-wrap: wrap;
 }
