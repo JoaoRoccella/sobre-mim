@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Icons&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined&display=swap');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
 
 body {
     font-family: 'Ubuntu', sans-serif;
@@ -207,6 +207,14 @@ p {
     font-size: 0.9rem;
     color: #555;
     margin-right: 1em;
+}
+
+.icone i {
+    color: #626786;
+}
+
+ .icone .fi-sr-web-test {
+    color: green;
 }
 
 /* Responsividade */
