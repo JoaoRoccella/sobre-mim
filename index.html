@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <!-- Meta informações sobre a página -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sobre mim</title>
-
-        <!-- CSS Reset -->
+        <!-- Estilos -->
         <link rel="stylesheet" href="reset.css">
-        
-        <!-- CSS externo (arquivo style) -->
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         
-        <header>
+        <header class="navbar">
             <nav>
                 <ul>
                     <li><a href="#sobreMim">Sobre mim</a></li>
@@ -29,9 +25,10 @@
         </header>
 
         <section id="sobreMim">
+            
             <h1>Sobre mim</h1>
             
-            <img src="joao.jpg" alt="Foto de um homem branco de barba preta com pintinhas no rosto, sorrindo." width="200" title="Foto de um homem branco de barba preta com pintinhas no rosto, sorrindo.">
+            <img src="joao.jpg" alt="Foto de um homem branco de barba preta com pintinhas no rosto, sorrindo." width="200" title="Foto de um homem branco, calvo, de barba preta com pintinhas no rosto, sorrindo.">
             
             <p>João, 39 anos, é professor de tecnologia no SENAI-SP, onde leciona para adolescentes no curso técnico de Análise e Desenvolvimento de Sistemas. Formado em Informática para Negócios pela FATEC, tem experiência em educação profissional e integração entre tecnologia e indústria. É casado com Ana e pai de três filhos: Samuel, Lia e Rebeca, equilibrando carreira e vida familiar com dedicação.</p>
             
@@ -56,26 +53,24 @@
         <div class="cards-em-coluna"> <!-- Contêiner dos cards -->
 
             <ul class="card">
-                <li class="titulo-card">Tecnólogo em Informática para Negócios</li>
+                <li class="card-titulo">Tecnólogo em Informática para Negócios</li>
                 <li class="instituicao-card">FATEC "Adib Moisés Dib"</li>
                 <li class="ano-card">2016</li>
             </ul>
 
             <ul class="card">
-                <li class="titulo-card">Técnico em Desenvolvimento de Sistemas</li>
+                <li class="card-titulo">Técnico em Desenvolvimento de Sistemas</li>
                 <li class="instituicao-card">SENAI "Conde José Vicente de Azevedo"</li>
                 <li class="ano-card">2026 (previsto)</li>
             </ul>
 
             <ul class="card">
-                <li class="titulo-card">Técnico em Eletrônica</li>
+                <li class="card-titulo">Técnico em Eletrônica</li>
                 <li class="instituicao-card">ETEC "Lauro Gomes"</li>
                 <li class="ano-card">2003</li>
             </ul>
 
         </div>
-
-        <!-- ul.card>li.titulo-card+li.instituicao-card+li.ano-card -->
 
     </section>
 
@@ -85,44 +80,45 @@
         <div class="cards-em-linha"> <!-- Contêiner dos cards (em linha) -->
 
             <ul class="card">
-                <li class="icone-card"><i class="fi fi-brands-python"></i></li>
-                <li class="titulo-card">Python</li>
-                <li class="descricao-card">Full stack, Flask, FastAPI</li>
+                <li class="card-icone"><i class="fi fi-brands-python"></i></li>
+                <li class="card-titulo">Python</li>
+                <li class="card-descricao">Full stack, Flask, FastAPI</li>
             </ul>
 
             <ul class="card">
-                <li class="icone-card"><i class="fi fi-sr-site-browser"></i></li>
-                <li class="titulo-card">Desenvolvimento Web</li>
-                <li class="descricao-card">Front-end, HTML, CSS, JavaScript</li>
+                <li class="card-icone"><i class="fi fi-sr-site-browser"></i></li>
+                <li class="card-titulo">Desenvolvimento Web</li>
+                <li class="card-descricao">Front-end, HTML, CSS, JavaScript</li>
             </ul>
 
             <ul class="card">
-                <li class="icone-card"><i class="fi fi-sr-phone-heart-message"></i></li>
-                <li class="titulo-card">Desenvolvimento Mobile</li>
-                <li class="descricao-card">Kotlin, Android Studio, Jetpack Compose</li>
+                <li class="card-icone"><i class="fi fi-sr-phone-heart-message"></i></li>
+                <li class="card-titulo">Desenvolvimento Mobile</li>
+                <li class="card-descricao">Kotlin, Android Studio, Jetpack Compose</li>
             </ul>
 
             <ul class="card">
-                <li class="icone-card"><i class="fi fi-sr-sql-server"></i></li>
-                <li class="titulo-card">Análise de Dados</li>
-                <li class="descricao-card">MySQL, Power BI</li>
+                <li class="card-icone"><i class="fi fi-sr-sql-server"></i></li>
+                <li class="card-titulo">Análise de Dados</li>
+                <li class="card-descricao">MySQL, Power BI</li>
             </ul>
 
             <ul class="card">
-                <li class="icone"><i class="fi fi-sr-system-cloud"></i></li>
+                <li class="card-icone"><i class="fi fi-sr-system-cloud"></i></li>
                 <li class="card-titulo">DevOps & Cloud</li>
+                <li class="card-descricao">AWS, Azure, Google</li>
             </ul>
 
             <ul class="card">
-                <li class="icone-card"><i class="fi fi-sr-web-test"></i></li>
-                <li class="titulo-card">Testes de Software</li>
-                <li class="descricao-card">JUnit, Cypress</li>
+                <li class="card-icone"><i class="fi fi-sr-web-test"></i></li>
+                <li class="card-titulo">Testes de Software</li>
+                <li class="card-descricao">JUnit, Cypress</li>
             </ul>
 
             <ul class="card">
-                <li class="icone-card"><i class="fi fi-brands-microsoft"></i></li>
-                <li class="titulo-card">Microsoft 365</li>
-                <li class="descricao-card">Word, Excel, PowerPoint</li>
+                <li class="card-icone"><i class="fi fi-brands-microsoft"></i></li>
+                <li class="card-titulo">Microsoft 365</li>
+                <li class="card-descricao">Word, Excel, PowerPoint</li>
             </ul>
 
         </div>
@@ -136,43 +132,43 @@
         <div class="cards-em-linha">
 
             <ul class="card">
-                <li class="icone-card"><i class="fi fi-sr-lead-management"></i></li>
-                <li class="titulo-card">Trabalho em equipe</li>
+                <li class="card-icone"><i class="fi fi-sr-lead-management"></i></li>
+                <li class="card-titulo">Trabalho em equipe</li>
             </ul>
 
             <ul class="card">
-                <li class="icone"><i class="fi fi-sr-bubble-discussion"></i></li>
+                <li class="card-icone"><i class="fi fi-sr-bubble-discussion"></i></li>
                 <li class="card-titulo">Comunicação</li>
             </ul>
 
             <ul class="card">
-                <li class="icone-card"><i class="fi fi-sr-brain-circuit"></i></li>
-                <li class="titulo-card">Pensamento crítico</li>
+                <li class="card-icone"><i class="fi fi-sr-brain-circuit"></i></li>
+                <li class="card-titulo">Pensamento crítico</li>
             </ul>
 
             <ul class="card">
-                <li class="icone"><i class="fi fi-sr-lightbulb-on"></i></li>
+                <li class="card-icone"><i class="fi fi-sr-lightbulb-on"></i></li>
                 <li class="card-titulo">Criatividade</li>
             </ul>
 
             <ul class="card">
-                <li class="icone-card"><i class="fi fi-sr-puzzle-pieces"></i></li>
-                <li class="titulo-card">Resolução de problemas</li>
+                <li class="card-icone"><i class="fi fi-sr-puzzle-pieces"></i></li>
+                <li class="card-titulo">Resolução de problemas</li>
             </ul>
 
             <ul class="card">
-                <li class="icone-card"><i class="fi fi-sr-convert-shapes"></i></li>
-                <li class="titulo-card">Adaptabilidade</li>
+                <li class="card-icone"><i class="fi fi-sr-convert-shapes"></i></li>
+                <li class="card-titulo">Adaptabilidade</li>
             </ul>
 
             <ul class="card">
-                <li class="icone-card"><i class="fi fi-sr-book-copy"></i></li>
-                <li class="titulo-card">Aprendizado contínuo</li>
+                <li class="card-icone"><i class="fi fi-sr-book-copy"></i></li>
+                <li class="card-titulo">Aprendizado contínuo</li>
             </ul>
 
             <ul class="card">
-                <li class="icone-card"><i class="fi fi-sr-stopwatch"></i></li>
-                <li class="titulo-card">Autogestão</li>
+                <li class="card-icone"><i class="fi fi-sr-stopwatch"></i></li>
+                <li class="card-titulo">Autogestão</li>
             </ul>
 
         </div>
@@ -182,9 +178,9 @@
         <section id="meusProjetos">
             <h2>Meus projetos</h2>
             
-            <div class="cards-linha">
+            <div class="cards-em-linha">
 
-                <ul class="cards">
+                <ul class="card">
                     <li class="card-imagem">
                         <img src="moon_lander.png" alt="Moon Lander"></li>
                     <li class="card-titulo">Moon Lander</li>
@@ -198,13 +194,13 @@
         </section>
 
         <section id="meusArtigos">
-            <h2>Meus artigos</h2>
+            <h2 class="titulo-secao">Meus artigos</h2>
             
-            <div class="artigos">
+            <div class="artigos cards-em-linha">
 
-                <article>
+                <article class="card">
                     <header>
-                        <h3>Aplicação full stack com Flask</h3>
+                        <h3 class="card-titulo">Aplicação full stack com Flask</h3>
                         <span class="data-publicacao">15 abr 2025</span>
                         <span class="autor">João Roccella</span>
                     </header>
@@ -215,22 +211,23 @@
                     </footer>
                 </article>
 
-                <article>
+                <article class="card">
                     <header>
-                        <h3>API RESTful com FastAPI</h3>
+                        <h3 class="card-titulo">API RESTful com FastAPI</h3>
                         <span class="data-publicacao">15 abr 2025</span>
                         <span class="autor">João Roccella</span>
                     </header>
                     <p>Aprenda a criar APIs RESTful com o FastAPI, um framework moderno e rápido para construir APIs com Python incluindo exemplos práticos e documentação.</p>
+                    <p>E o melhor de tudo: sua documentação de API com Swagger sai automaticamente!</p>
                     <footer>
                         <button type="button" class="botao botao-continue">Continuar lendo</button>
                         <button type="button" class="botao botao-compartilhar">Compartilhar</button>
                     </footer>
                 </article>
 
-                <article>
+                <article class="card">
                     <header>
-                        <h3>Portfólio profissional usando GitHub Pages</h3>
+                        <h3 class="card-titulo">Portfólio profissional usando GitHub Pages</h3>
                         <span class="data-publicacao">15 abr 2025</span>
                         <span class="autor">João Roccella</span>
                     </header>
