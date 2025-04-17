@@ -291,9 +291,22 @@ input[type="submit"] {
 /* Responsividade */
 @media (max-width: 768px) {
 
-    /* #sobreMim {
-        padding: 4rem;
-    } */
+    #sobreMim {
+        padding: 2rem;
+    }
+
+    .redes {
+        margin: 2rem 0 0;
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    section {
+        display: block;
+        padding: 2rem;
+        min-height: initial;
+    }
 
     .cards-linha {
         flex-direction: column;
