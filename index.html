@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark">
 
 <head>
     <!-- Meta informações sobre a página -->
@@ -33,38 +33,36 @@
                 <li><a href="#meusProjetos">Projetos</a></li>
                 <li><a href="#meusArtigos">Artigos</a></li>
                 <li><a href="#contato">Contato</a></li>
+                <li><span id="botao-tema">Tema</span></li>
+                <li><span id="botao-contraste">Contraste</span></li>
             </ul>
         </nav>
     </header>
 
     <section id="sobreMim">
-        <h1>Sobre mim</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus ad nulla, veritatis obcaecati rerum eveniet
-            reiciendis, blanditiis assumenda voluptatibus odio modi. Explicabo maxime provident aperiam placeat, ullam
-            quibusdam corporis pariatur incidunt inventore recusandae blanditiis, sed numquam modi eveniet aliquam
-            molestias nostrum! Deserunt soluta blanditiis earum est recusandae accusamus quidem necessitatibus officiis
-            hic atque ex maiores, provident quisquam. Beatae, commodi dolorum.</p>
+        
+        <h1 class="titulo-secao">Sobre mim</h1>
+        
+        <img src="joao.jpg" alt="Foto de um homem branco de barba preta com pintinhas no rosto, sorrindo." width="200" title="Foto de um homem branco de barba preta com pintinhas no rosto, sorrindo.">
+        
+        <p>
+            João, 39 anos, é professor de tecnologia no SENAI-SP, onde leciona no curso técnico de Desenvolvimento de Sistemas. Formado em Informática para Negócios pela FATEC, tem experiência em educação profissional e integração entre tecnologia e indústria. É casado com Ana e pai de três filhos: Samuel, lia e Rebeca, equilibrando careira e vida familiar com dedicação.
+        </p>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatem eius beatae saepe officia,
-            expedita earum repellat qui magni deleniti consequuntur maxime, vitae totam? Quo magni nobis, eos quia
-            facilis atque, adipisci ducimus eaque in molestias rerum illum facere sequi.</p>
+        <p>
+            Com uma trajetória marcada por resiliência e compromisso com a formação de jovens, joão valoriza metodologias ativas de ensino e busca inovar em sala de aula. Atualmente, tem investido em projetos que unem tecnologia e competências socioemocionais, como o uso de jogos de tabuleiro e o desenvolvimento de soluções práticas com IoT e programação em Python.
+        </p>
 
-        <img src="joao.jpg" alt="Foto de um homem branco de barba preta com pintinhas no rosto, sorrindo." width="200"
-            title="Foto de um homem branco de barba preta com pintinhas no rosto, sorrindo.">
-
-        <!-- section>(h2>{Nova seção})+p*2>lorem20 -->
-
-        <!-- header>nav.navbar>ul.lista>li*10>a>{link$} -->
-
-        <ul>
+        <ul class="minhas-redes">
             <li>
                 <a href="https://github.com/joaoroccella" title="Clique para acessar meu portfólio no GitHub"
                     target="_blank">Acesse o meu GitHub</a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/in/joaoroccella/" target="_blank">Acesse o meu LinkedIn</a>
+                <a href="https://www.linkedin.com/in/joaoroccella/" title="Clique para conhecer meu perfil profissional completo no LinkedIn" target="_blank">Acesse o meu LinkedIn</a>
             </li>
         </ul>
+
     </section>
 
     <section id="formacaoAcademica">
@@ -246,6 +244,34 @@
         <p>Desenvolvido com ❤️ por João Roccella</p>
     </footer>
 
+    <script>
+        document.querySelector('#botao-tema').addEventListener('click', trocaTema);
+
+        function trocaTema() {
+            // Função que faz o toggle do tema da página
+            const root = document.documentElement;
+
+            if (root.getAttribute('data-theme') === 'dark') {
+                root.removeAttribute('data-theme');
+            } else {
+                root.setAttribute('data-theme', 'dark');
+            }
+        }
+
+        document.querySelector('#botao-contraste').addEventListener('click', trocaTemaContraste);
+
+        function trocaTemaContraste() {
+            // Função que faz o toggle do alto contraste da página
+
+            const root = document.documentElement;
+
+            if (root.getAttribute('data-theme') === 'alto-contraste') {
+                root.removeAttribute('data-theme');
+            } else {
+                root.setAttribute('data-theme', 'alto-contraste');
+            }
+        }
+    </script>
 </body>
 
 </html>
