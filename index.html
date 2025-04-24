@@ -1,30 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-theme="dark">
+<html lang="pt-br">
 
 <head>
-    <!-- Meta informações sobre a página -->
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre mim</title>
 
-    <!-- CSS Reset -->
-    <link rel="stylesheet" href="reset.css">
-
-    <!-- CSS externo (arquivo style) -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- CSS interno (tag style) -->
-    <style>
-        /* body {
-                background-color: #00ff00;
-            } */
-    </style>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
-    <header>
-        <nav>
+    <header class="header">
+        <nav class="navbar">
             <ul>
                 <li><a href="#sobreMim">Sobre mim</a></li>
                 <li><a href="#formacaoAcademica">Formação</a></li>
@@ -33,8 +22,8 @@
                 <li><a href="#meusProjetos">Projetos</a></li>
                 <li><a href="#meusArtigos">Artigos</a></li>
                 <li><a href="#contato">Contato</a></li>
-                <li><span id="botao-tema">Tema</span></li>
-                <li><span id="botao-contraste">Contraste</span></li>
+                <li><span id="botao-tema"><i class="fi fi-sr-background"></i></span></li>
+                <li><span id="botao-contraste"><i class="fi fi-sr-circle-half-stroke"></i></span></li>
             </ul>
         </nav>
     </header>
@@ -43,7 +32,7 @@
         
         <h1 class="titulo-secao">Sobre mim</h1>
         
-        <img src="joao.jpg" alt="Foto de um homem branco de barba preta com pintinhas no rosto, sorrindo." width="200" title="Foto de um homem branco de barba preta com pintinhas no rosto, sorrindo.">
+        <img src="./images/joao.jpg" alt="Foto de um homem branco de barba preta com pintinhas no rosto, sorrindo." width="200" title="Foto de um homem branco de barba preta com pintinhas no rosto, sorrindo.">
         
         <p>
             João, 39 anos, é professor de tecnologia no SENAI-SP, onde leciona no curso técnico de Desenvolvimento de Sistemas. Formado em Informática para Negócios pela FATEC, tem experiência em educação profissional e integração entre tecnologia e indústria. É casado com Ana e pai de três filhos: Samuel, lia e Rebeca, equilibrando careira e vida familiar com dedicação.
@@ -54,11 +43,13 @@
         </p>
 
         <ul class="minhas-redes">
-            <li>
+            <li class="botao botao-secundario">
+                <i class="fi fi-brands-github"></i>
                 <a href="https://github.com/joaoroccella" title="Clique para acessar meu portfólio no GitHub"
                     target="_blank">Acesse o meu GitHub</a>
             </li>
-            <li>
+            <li class="botao botao-primario">
+                <i class="fi fi-brands-linkedin"></i>
                 <a href="https://www.linkedin.com/in/joaoroccella/" title="Clique para conhecer meu perfil profissional completo no LinkedIn" target="_blank">Acesse o meu LinkedIn</a>
             </li>
         </ul>
@@ -69,71 +60,80 @@
 
         <h2 class="titulo-secao">Formação acadêmica</h2>
 
-        <div class="cards-em-coluna"> <!-- Contêiner dos cards -->
+        <div class="cards-em-coluna">
 
             <ul class="card">
-                <li class="titulo-card">Tecnólogo em Informática para Negócios</li>
-                <li class="instituicao-card">FATEC "Adib Moisés Dib"</li>
-                <li class="ano-card">2016</li>
+                <li class="card-titulo">Tecnólogo em Informática para Negócios</li>
+                <li class="card-instituicao">FATEC "Adib Moisés Dib" em São Bernardo do Campo</li>
+                <li class="card-ano">2016</li>
             </ul>
 
             <ul class="card">
-                <li class="titulo-card">Técnico em Desenvolvimento de Sistemas</li>
-                <li class="instituicao-card">SENAI "Conde José Vicente de Azevedo"</li>
-                <li class="ano-card">2026 (previsto)</li>
+                <li class="card-titulo">Técnico em Desenvolvimento de Sistemas</li>
+                <li class="card-instituicao">Escola e Faculdade SENAI "Conde José Vicente de Azevedo"</li>
+                <li class="card-ano">2026 (previsto)</li>
             </ul>
 
             <ul class="card">
-                <li class="titulo-card">Técnico em Eletrônica</li>
-                <li class="instituicao-card">ETEC "Lauro Gomes"</li>
-                <li class="ano-card">2003</li>
+                <li class="card-titulo">Técnico em Eletrônica</li>
+                <li class="card-instituicao">ETEC "Lauro Gomes"</li>
+                <li class="card-ano">2003</li>
             </ul>
 
         </div>
 
-        <!-- ul.card>li.titulo-card+li.instituicao-card+li.ano-card -->
+        <!-- ul.card>li.card-titulo+li.card-instituicao+li.card-ano -->
 
     </section>
 
     <section id="hardSkills">
+
+        <img src="images/flame.svg" alt="">
+
         <h2 class="titulo-secao">Hard skills</h2>
 
         <div class="cards-em-linha"> <!-- Contêiner dos cards (em linha) -->
 
             <ul class="card">
-                <li class="icone-card">🐍</li>
-                <li class="titulo-card">Python</li>
-                <li class="descricao-card">Full stack, Flask, FastAPI</li>
+                <li class="card-icone"><i class="fi fi-brands-python"></i></li>
+                <li class="card-titulo">Python</li>
+                <li class="card-descricao">Full stack, Flask, FastAPI</li>
             </ul>
 
             <ul class="card">
-                <li class="icone-card">🌐</li>
-                <li class="titulo-card">Desenvolvimento Web</li>
-                <li class="descricao-card">Front-end, HTML, CSS, JavaScript</li>
+                <li class="card-icone"><i class="fi fi-sr-site-browser"></i></li>
+                <li class="card-titulo">Desenvolvimento Web</li>
+                <li class="card-descricao">Front-end, HTML, CSS, JavaScript</li>
             </ul>
 
             <ul class="card">
-                <li class="icone-card">📱</li>
-                <li class="titulo-card">Desenvolvimento Mobile</li>
-                <li class="descricao-card">Kotlin, Android Studio, Jetpack Compose</li>
+                <li class="card-icone"><i class="fi fi-sr-phone-heart-message"></i></li>
+                <li class="card-titulo">Desenvolvimento Mobile</li>
+                <li class="card-descricao">Kotlin, Android Studio, Jetpack Compose</li>
             </ul>
 
             <ul class="card">
-                <li class="icone-card">🎲</li>
-                <li class="titulo-card">Análise de Dados</li>
-                <li class="descricao-card">MySQL, Power BI</li>
+                <li class="card-icone"><i class="fi fi-sr-sql-server"></i></li>
+                <li class="card-titulo">Análise de Dados</li>
+                <li class="card-descricao">MySQL, Power BI</li>
             </ul>
 
             <ul class="card">
-                <li class="icone-card">🧪</li>
-                <li class="titulo-card">Testes de Software</li>
-                <li class="descricao-card">JUnit, Cypress</li>
+                <li class="card-icone"><i class="fi fi-sr-system-cloud"></i></li>
+                <li class="card-titulo">DevOps & Cloud</li>
+                <li class="card-descricao">AWS, Azure, Google</li>
             </ul>
 
             <ul class="card">
-                <li class="icone-card">🧾</li>
-                <li class="titulo-card">Microsoft 365</li>
-                <li class="descricao-card">Word, Excel, PowerPoint</li>
+                <li class="card-icone"><i class="fi fi-sr-web-test"></i></li>
+                <li class="card-titulo">Testes de Software</li>
+                <li class="card-descricao">JUnit, Cypress</li>
+            </ul>
+
+            <ul class="card">
+                <li class="card-icone"><i class="fi fi-brands-microsoft"></i></li>
+                <li class="card-titulo">Microsoft 365</li>
+                <li class="card-descricao">Word, Excel, PowerPoint</li>
             </ul>
 
         </div>
@@ -142,39 +142,52 @@
 
     <section id="softSkills">
 
+        <img src="images/heart.svg" alt="">
+
         <h2 class="titulo-secao">Soft skills</h2>
 
         <div class="cards-em-linha">
 
             <ul class="card">
-                <li class="icone-card">🤝</li>
-                <li class="titulo-card">Trabalho em equipe</li>
+                <li class="card-icone"><i class="fi fi-sr-lead-management"></i></li>
+                <li class="card-titulo">Trabalho em equipe</li>
             </ul>
 
             <ul class="card">
-                <li class="icone-card">🧠</li>
-                <li class="titulo-card">Pensamento crítico</li>
+                <li class="card-icone"><i class="fi fi-sr-bubble-discussion"></i></li>
+                <li class="card-titulo">Comunicação</li>
             </ul>
 
             <ul class="card">
-                <li class="icone-card">🤔</li>
-                <li class="titulo-card">Resolução de problemas</li>
+                <li class="card-icone"><i class="fi fi-sr-brain-circuit"></i></li>
+                <li class="card-titulo">Pensamento crítico</li>
             </ul>
 
             <ul class="card">
-                <li class="icone-card">🐙</li>
-                <li class="titulo-card">Adaptabilidade</li>
+                <li class="card-icone"><i class="fi fi-sr-lightbulb-on"></i></li>
+                <li class="card-titulo">Criatividade</li>
             </ul>
 
             <ul class="card">
-                <li class="icone-card">📚</li>
-                <li class="titulo-card">Aprendizado contínuo</li>
+                <li class="card-icone"><i class="fi fi-sr-puzzle-pieces"></i></li>
+                <li class="card-titulo">Resolução de problemas</li>
             </ul>
 
             <ul class="card">
-                <li class="icone-card">⏱️</li>
-                <li class="titulo-card">Autogestão</li>
+                <li class="card-icone"><i class="fi fi-sr-convert-shapes"></i></li>
+                <li class="card-titulo">Adaptabilidade</li>
             </ul>
+
+            <ul class="card">
+                <li class="card-icone"><i class="fi fi-sr-book-copy"></i></li>
+                <li class="card-titulo">Aprendizado contínuo</li>
+            </ul>
+
+            <ul class="card">
+                <li class="card-icone"><i class="fi fi-sr-stopwatch"></i></li>
+                <li class="card-titulo">Autogestão</li>
+            </ul>
+
 
         </div>
 
@@ -182,72 +195,175 @@
 
     <section id="meusProjetos">
 
-        <h2>Meus projetos</h2>
+        <img src="images/code-branch.svg" alt="Code Branch">
 
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis aspernatur voluptatem dolore fugit ipsam
-            dolorem corrupti impedit consequatur incidunt a.</p>
+        <h2 class="titulo-secao">Meus projetos</h2>
 
-        <ul>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse et saepe sunt adipisci vitae quo.</li>
-            <li>Ratione aliquam aspernatur, dolore porro similique eos, nihil amet rerum blanditiis provident itaque
-                modi dolorum!</li>
-            <li>Ipsam praesentium neque omnis error voluptatibus natus rerum, consequatur vitae illo, quisquam vel ullam
-                nobis.</li>
-            <li>Non optio reprehenderit error totam earum, amet id dolorem, assumenda repudiandae ad rerum nam iure!
-            </li>
-            <li>Qui, numquam suscipit magnam beatae, consectetur officiis obcaecati exercitationem quisquam aspernatur
-                quo laudantium, debitis necessitatibus.</li>
-            <li>Mollitia tenetur quis debitis corrupti officia dolor eligendi. Natus dicta reprehenderit sequi deserunt!
-                Quis, minus?</li>
-            <li>Animi hic voluptatum aliquam quam enim. Repudiandae vitae ea consequatur iure facere assumenda ducimus.
-                Alias?</li>
-        </ul>
+        <div class="cards-em-linha">
+
+            <ul class="card">
+                <li class="card-imagem">
+                    <img src="./images/screen_moonlander.png" alt="Jogo Moon Lander">
+                </li>
+                <li class="card-titulo">Moon Lander</li>
+                <li class="card-descricao">Um jogo de simulação de pouso lunar programado inteiramente em JavaScript.</li>
+                <li class="card-cta"> 
+                    <button type="button" class="botao botao-primario" id="botaoMoonlander">Jogue agora</button>
+                </li>
+                <li class="card-gh"><a class="botao botao-secundario" href="https://github.com/joaoroccella/lopal-moonlander" target="_blank"><i class="fi fi-brands-github"></i></a></li>
+            </ul>
+
+        </div>
+
+        <div id="overlay" class="invisible"></div>
+
+        <div class="preview-moonlander invisible">
+            <iframe src="https://joaoroccella.github.io/lopal-moonlander/" frameborder="0"></iframe>
+        </div>
 
     </section>
 
     <section id="meusArtigos">
-        <h2>Meus artigos</h2>
-        <ul>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur nesciunt at ea voluptatibus ad odio
-                sed voluptates, labore inventore quod fugiat eos iure reiciendis itaque odit nemo soluta totam minima?
-            </li>
-            <li>Velit molestiae dolorem ea ducimus delectus voluptatem maiores aut, non ad autem magnam nam beatae dolor
-                odio natus dignissimos, sequi commodi consequuntur reiciendis saepe, ratione distinctio vero. Eveniet,
-                quo provident.</li>
-            <li>Deleniti et id voluptatem repudiandae officiis quae necessitatibus tempore non dolorem ad est impedit
-                maxime repellendus eos eligendi qui aut, commodi natus sint illum soluta possimus cum inventore
-                consequatur! Totam.</li>
-        </ul>
+        
+        <h2 class="titulo-secao">Meus artigos</h2>
+        
+        <div class="artigos cards-em-linha">
+
+            <article class="card">
+               
+                <header>
+                    <h3 class="card-titulo">Portfólio profisisonal usando GitHub Pages</h3>
+                    <span class="data-publicacao">15 abr 2025</span>
+                    <span class="autor">João Roccella</span>
+                </header>
+
+                <p>Crie e publique seu portfólio profissional usando GitHub Pages, uma maneira fácil e gratuita de mostrar seus projetos e habilidades.</p>
+
+                <footer>
+                    <button type="button" class="botao botao-primario">Continue lendo</button>
+                    <button type="button" class="botao botao-secundario" title="Compartilhar"><i class="fi fi-sr-share"></i></button>
+                </footer>
+
+            </article>
+
+            <article class="card">
+               
+                <header>
+                    <h3 class="card-titulo">Aplicação full stack com Flask</h3>
+                    <span class="data-publicacao">17 abr 2025</span>
+                    <span class="autor">João Roccella</span>
+                </header>
+
+                <p>Aprenda a desenvolver aplicações full stack com Flask, um framework web em Python que permite criar aplicações robustas e escaláveis.</p>
+
+                <footer>
+                    <button type="button" class="botao botao-primario">Continue lendo</button>
+                    <button type="button" class="botao botao-secundario" title="Compartilhar"><i class="fi fi-sr-share"></i></button>
+                </footer>
+
+            </article>
+
+            <article class="card">
+               
+                <header>
+                    <h3 class="card-titulo">API RESTful com FastAPI</h3>
+                    <span class="data-publicacao">21 abr 2025</span>
+                    <span class="autor">João Roccella</span>
+                </header>
+
+                <p>Aprenda a criar APIs RESTful com o FastAPI, um framework moderno e rápido para construir APIs com Python incluindo exemplos práticos e documentação.</p>
+                <p>E o melhor de tudo: sua documentação de API com Swagger sai automaticamente!</p>
+
+                <footer>
+                    <button type="button" class="botao botao-primario">Continue lendo</button>
+                    <button type="button" class="botao botao-secundario" title="Compartilhar"><i class="fi fi-sr-share"></i></button>
+                </footer>
+
+            </article>
+
+        </div>
+
     </section>
 
     <section id="contato">
-        <h2>Entre em contato comigo</h2>
+
+        <img src="images/mobile-hand.svg" alt="Mobile Hand">
+        
+        <h2 class="titulo-secao">Entre em contato comigo</h2>
+        
         <form>
-            <input type="text" name="nome">
-            <input type="email" name="email">
-            <textarea name="mensagem" rows="5" cols="50"></textarea>
-            <input type="submit" name="botaoEnviar" value="Solicitar contato">
-            <!-- <button type="button" name="botaoEnviar">Solicitar contato</button> -->
+            <div class="campo">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome">
+            </div>
+            
+            <div class="campo">
+                <label for="email">Email</label>
+                <input type="email" name="email">
+            </div>
+
+            <div class="campo">
+                <label for="mensagem">Mensagem</label>
+                <textarea name="mensagem" rows="5" cols="50"></textarea>
+            </div>
+
+            <input class="botao botao-primario" type="submit" name="botaoEnviar" value="Solicitar contato">
         </form>
     </section>
 
     <footer id="rodape">
-        <ul>
-            <li>Facebook</li>
-            <li>Instagram</li>
-            <li>YouTube</li>
-            <a href="mailto:joao.a@docente.senai.br">joao.a@docente.senai.br</a>
-            <a href="tel:+5511983724240">(11) 98372-4240</a>
-            <a href="https://wa.me/5511983724240">Fale comigo no WhatsApp</a>
-        </ul>
-        <address>São Paulo, SP - Brasil</address>
-        <p>Desenvolvido com ❤️ por João Roccella</p>
+        
+        <div class="colunas">
+
+            <div class="rodape-coluna">
+                <h4>Perfis</h4>
+                <ul>
+                    <li>
+                        <i class="fi fi-brands-github"></i>
+                        <span>@joaoroccella</span></li>
+                    <li>
+                        <i class="fi fi-brands-linkedin"></i>
+                        <span>@joaoroccella</span></li>
+                    <li>
+                        <i class="fi fi-brands-youtube"></i>
+                        <span>@joaorocella</span></li>
+                </ul>
+            </div>
+            
+            <div class="rodape-coluna">
+                <h4>Contato</h4>
+                <ul>
+                    <li>
+                        <i class="fi fi-sr-envelope"></i>
+                        <a href="mailto:joao.a@docente.senai.br">joao.a@docente.senai.br</a></li>
+                    <li>
+                        <i class="fi fi-sr-phone-call"></i>
+                        <i class="fi fi-brands-whatsapp"></i>
+                        <a href="tel:+5511983724240">(11) 98372-4240</a></li>
+                    
+                </ul>
+            </div>
+
+            <div class="rodape-coluna">
+                <h4>Localidade</h4>
+                <address>
+                    <i class="fi fi-sr-marker"></i>São Paulo, SP<br>
+                    <i class="fi fi-sr-brazil"></i>Brasil</address>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <span>Desenvolvido com ❤️ por João Roccella</span>
+            <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://joaoroccella.github.io/sobre-mim">Portfólio de João Roccella</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/JoaoRoccella">João Roccella</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+        </div>
+                
     </footer>
 
     <script>
-        document.querySelector('#botao-tema').addEventListener('click', trocaTema);
+        document.querySelector('#botao-tema').addEventListener('click', trocarTema);
 
-        function trocaTema() {
+        function trocarTema() {
             // Função que faz o toggle do tema da página
             const root = document.documentElement;
 
@@ -258,9 +374,9 @@
             }
         }
 
-        document.querySelector('#botao-contraste').addEventListener('click', trocaTemaContraste);
+        document.querySelector('#botao-contraste').addEventListener('click', trocarTemaContraste);
 
-        function trocaTemaContraste() {
+        function trocarTemaContraste() {
             // Função que faz o toggle do alto contraste da página
 
             const root = document.documentElement;
@@ -271,7 +387,29 @@
                 root.setAttribute('data-theme', 'alto-contraste');
             }
         }
+
+        document.querySelector('#botaoMoonlander').addEventListener('click', abrirJogo);
+
+        function abrirJogo() {
+            // Função que abre o jogo Moon Lander na tela do usuário
+
+            document.querySelector('body').classList.add('modal-open');
+            document.querySelector('#overlay').classList.remove('invisible');
+            document.querySelector('.preview-moonlander').classList.remove('invisible');
+            document.querySelector('.preview-moonlander>iframe').contentWindow.focus();
+        }
+
+        document.querySelector('#overlay').addEventListener('click', fecharJogo);
+
+        function fecharJogo() {
+            // Função que fecha o jogo da tela do usuário
+
+            document.querySelector('body').classList.remove('modal-open');
+            document.querySelector('#overlay').classList.add('invisible');
+            document.querySelector('.preview-moonlander').classList.add('invisible');
+        }
     </script>
+
 </body>
 
 </html>

@@ -83,7 +83,6 @@ img,
 video {
   max-width: 100%;
   height: auto;
-  display: block;
 }
 
 /* 12. Cabeçalhos sem margens iniciais */
